@@ -7,6 +7,9 @@
     <div class="detail-meta">
       <span>CodeShelf Author</span>
       <time datetime="<%= @article.created_at.iso8601 %>"><%= @article.created_at.strftime("%Y.%m.%d") %></time>
+      <% if @article.category.present? %>
+        <span>カテゴリ：<%= @article.category %></span>
+      <% end %>
     </div>
   </header>
 
